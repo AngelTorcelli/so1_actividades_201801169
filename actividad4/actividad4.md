@@ -1,6 +1,8 @@
 #Actividad 4 - Chat Basico con Named Pipes
 Angel David Torcelli Barrios - 201801169
 
+---
+
 Para el chat se crearon dos scripts los cuales corresponden a cada participante.
 ## Creación de los scripts
 ### Participante 1
