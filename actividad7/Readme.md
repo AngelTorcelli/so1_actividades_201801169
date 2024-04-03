@@ -15,3 +15,7 @@ Las características principales del CFS incluyen:
 3. Virtual Run Time: El CFS registra cuánto tiempo ha ejecutado cada tarea mediante el uso de la variable por tarea llamada "vruntime". Esta virtual run time está asociada a un factor de decaimiento basado en la prioridad de la tarea.
 
 4. Árbol Rojo-Negro para tareas ejecutables: En lugar de utilizar una estructura de cola estándar, el CFS utiliza un árbol rojo-negro para organizar las tareas ejecutables, donde la clave de ordenación es el valor de "vruntime".
+
+El proceso de decisión de qué tarea ejecutar a continuación se basa en seleccionar la tarea con el valor de "vruntime" más pequeño. Además, una tarea de mayor prioridad que se vuelve disponible para ejecutarse puede interrumpir una tarea de menor prioridad.
+
+El CFS también implementa el balance de carga, asegurando que cada núcleo de procesamiento tenga una carga aproximadamente equitativa. Utiliza una técnica sofisticada que minimiza la migración de hilos y es consciente de la arquitectura NUMA (Non-Uniform Memory Access).
